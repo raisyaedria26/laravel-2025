@@ -26,4 +26,10 @@ class LoginController extends Controller
         return back()->withInput($request->only('email'));
 
     }
+
+    public function logout()
+    {
+        Auth::logout();
+        return redirect()->to('/');
+    }
 }
