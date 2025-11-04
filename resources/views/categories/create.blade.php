@@ -10,17 +10,12 @@
             @endforeach
         </ul>
     @endif
-    <form action="{{ route('user.store') }}" method="post">
+    <form action="{{ route('category.store') }}" method="post">
         @csrf
-        <label for="" class="form-label">Name</label>
-        <input type="text" class="form-control" name="name" value="{{ old('name') }}" required>
-
-        <label for="" class="form-label">Email</label>
-        <input type="email" class="form-control" name="email" required>
-
-        <label for="" class="form-label">Password</label>
-        <input type="password" class="form-control" name="password" required>
-
+        <div class="mb-3">
+            <label for="" class="form-label">Name</label>
+            <input type="text" class="form-control" name="category_name" value="{{old('category_name')}}" required placeholder="Enter ur category name">
+        </div>
         <button type="submit" class="btn btn-outline-primary mt-2">Save</button>
     </form>
 @endsection

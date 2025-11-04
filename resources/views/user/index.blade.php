@@ -2,12 +2,12 @@
 @section('content')
 {{-- @dd($users) --}}
     <div class="d-flex justify-content-end my-2">
-        <a href="{{ route('user.create') }}" class="btn btn-primary">ADD</a>
+        <a href="{{ route('user.create') }}" class="btn btn-primary"><i class="bi bi-plus-circle"></i>  User</a>
     </div>
     <table class="table table-bordered">
         <tr>
-            <th>No.</th>
-            <th>Username</th>
+            <th>No</th>
+            <th>Name</th>
             <th>Email</th>
             <th>Actions</th>
         </tr>
@@ -17,12 +17,12 @@
             <td>{{ $user->name }}</td>
             <td>{{ $user->email }}</td>
             <td>
-                <a href="{{ route('user.edit', $user->id) }}" class="btn btn-warning btn-sm">Edit</a>
+                <a href="{{ route('user.edit', $user->id) }}" class="btn btn-outline-warning btn-sm"><i class="bi bi-pencil"></i></a>
 
                 <form action="{{ route('user.destroy', $user->id) }}" method="post" onsubmit="return confirm('R u sure wanna delete it')" class="d-inline">
                     @csrf
                     @method('DELETE')
-                    <button type="submit" class="btn btn-danger btn-sm">Delete</button>
+                    <button type="submit" class="btn btn-outline-danger btn-sm"><i class="bi bi-trash"></i></button>
                 </form>
             </td>
         </tr>

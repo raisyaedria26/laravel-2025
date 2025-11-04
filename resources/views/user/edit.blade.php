@@ -13,7 +13,7 @@
     <form action="{{ route('user.update', $user->id) }}" method="post">
         @csrf
         @method('PUT')
-        <label for="" class="form-label">Username</label>
+        <label for="" class="form-label">Name</label>
         <input type="text" class="form-control" name="name" value="{{$user ? $user->name : old('name')}}">
 
         <label for="" class="form-label">Email</label>
