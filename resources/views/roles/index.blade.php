@@ -1,6 +1,6 @@
 @extends('app')
 @section('content')
-@section('title', 'Master Data Category')
+{{-- @section('title', 'Master Data Category') --}}
     {{-- @dd($users) --}}
     <div class="d-flex justify-content-end my-2">
         <a href="{{ route('role.create') }}" class="btn btn-primary"><i class="bi bi-plus-circle"></i>  Category</a>
