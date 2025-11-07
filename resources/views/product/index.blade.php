@@ -23,7 +23,9 @@ use App\Models\Category;
                 <td><img width="100" src="{{asset('storage/' . $data->product_photo)}}" alt="{{$data->product_photo}}"></td>
                 <td>{{ $data->product_name }}</td>
                 <td>{{ $data->product_price }}</td>
-                <td>{{ $data->is_active }}</td>
+                <td>
+                    <span class="{{ $data->is_active_class }}">{{ $data->is_active_text }}</span>
+                </td>
                 <td>
                     <a href="{{ route('product.edit', $data->id) }}" class="btn btn-outline-warning btn-sm"><i class="bi bi-pencil"></i></a>
 
